@@ -1,0 +1,16 @@
+server:
+  port: 9002
+
+wechat:
+  mp:
+    appId: wxe3a584965a77a13b
+    secret: 456ec50fc462b445dbd0e46977c6ad19
+    token: 87B948CF23C64979A4ED29DD
+    aesKey:
+    redisProperties:
+      address: redis://47.100.96.185:6379
+      password: xing123456
+      database: 1
+    template_msg_able: true
+  msg:
+    template_id: E2GiNnY2bB7Pr_mAVpXvijZYyNYB0esMwDuC1QyB-3k
