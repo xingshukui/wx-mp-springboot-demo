@@ -24,7 +24,6 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/wechat")
 public class WxGlobalController {
-    private static final String SUCCESS = "success";
 
     @Autowired
     private WxMpService wxMpService;
@@ -38,7 +37,7 @@ public class WxGlobalController {
         String timestamp = request.getParameter("timestamp");// 时间戳
         String nonce = request.getParameter("nonce");// 随机数
         if (wxMpService.checkSignature(timestamp, nonce, signature)) {
-            return SUCCESS;
+            return request.getParameter("echostr");//随机字符串
         }
         return null;
     }
